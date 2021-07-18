@@ -5,10 +5,17 @@ import Intern from "./lib/Intern.js";
 import Engineer from "./lib/Engineer.js";
 import Manager from "./lib/Manager.js";
 
-const allAnswers = {employees:[]}
+const employees = []
 inquirer.prompt(managerq)
       .then(function(answer){
-        allAnswers.manager = answer
+        let temp = new Manager(answer.name, answer.id, answer.email, answer.office)
+        let name = temp.getName()
+        let id = temp.getId()
+        let email = temp.getEmail()
+        let role = temp.getRole()
+        let offnum = temp.getOfficeNumber()      
+       
+        employees.push({name, id, email, role, offnum})
         addEmployee()
       })
 
@@ -48,27 +55,47 @@ inquirer.prompt(managerq)
       const createEmployee = () => {
         inquirer.prompt(employeeq).then(answer => {
           let temp = new Employee(answer.name, answer.id, answer.email)
-          allAnswers.employees.push(temp)
+          let name = temp.getName()
+          let id = temp.getId()
+          let email = temp.getEmail()
+          let role = temp.getRole()      
+         
+          employees.push({name, id, email, role})
           addEmployee()
-        })          
+        })        
           
         
       }
 
       const createEngineer = () => {
-        inquirer.prompt(employeeq).then(answer => {
-          allAnswers.employees.push(answer)
+        inquirer.prompt(engineerq).then(answer => {
+          let temp = new Engineer(answer.name, answer.id, answer.email, answer.github)
+          let name = temp.getName()
+          let id = temp.getId()
+          let email = temp.getEmail()
+          let role = temp.getRole() 
+          let git = temp.getGithub()     
+         
+          employees.push({name, id, email, role, git})
           addEmployee()
         }) 
       }
 
       const createIntern = () => {
-        inquirer.prompt(employeeq).then(answer => {
-          allAnswers.employees.push(answer)
+        inquirer.prompt(internq).then(answer => {
+          let temp = new Intern(answer.name, answer.id, answer.email, answer.school)
+          let name = temp.getName()
+          let id = temp.getId()
+          let email = temp.getEmail()
+          let role = temp.getRole()
+          let school = temp.getSchool()      
+         
+          employees.push({name, id, email, role, school})
           addEmployee()
-        }) 
+        })
+
       }
 
       const generateHtml = () => {
-        console.log(allAnswers)
+        console.log(employees)
       }
