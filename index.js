@@ -6,8 +6,10 @@ import Employee from "./lib/Employee.js";
 import Intern from "./lib/Intern.js";
 import Engineer from "./lib/Engineer.js";
 import Manager from "./lib/Manager.js";
+
+import createHtml from "./src/generateHTML.js";
 // 'employees' initialized as an empty array
-const employees = [] 
+export const employees = [] 
 /* Assuming either the Manager is setting up the team, or administrative staff
  sets up the Manager's data first AND there is only one Manager per team.
  This next step could be turned into a function 'addManager' if there were
@@ -62,7 +64,7 @@ inquirer.prompt(managerq)
                 }break;
                 // If "No more employees" is selected, the default will be triggered and the page rendered.
                 default:{
-                  generateHtml()
+                  createHtml(employees)
                 }break;             
               };
             });
@@ -114,6 +116,4 @@ inquirer.prompt(managerq)
 
       }
 
-      const generateHtml = () => {
-        console.log(employees)
-      }
+      
