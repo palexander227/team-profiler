@@ -1,3 +1,7 @@
+ // Setting up separate arrays employeeq, internq, etc. to hold the different
+ // question routines which will be activated upon selection of different employee
+ // classifications.
+ 
  const employeeq =[
     {
         name:"name",
