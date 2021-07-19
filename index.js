@@ -1,5 +1,5 @@
 import inquirer from "inquirer"
-// import question arrays as object
+// import question arrays as named imports (destructuring)
 import {managerq, employeeq, internq, engineerq} from "./src/questions.js"
 // import classes for use in question routines
 import Employee from "./lib/Employee.js";
@@ -31,15 +31,15 @@ inquirer.prompt(managerq)
       /* A function which uses inquirer to select options or end the data input process. 
       Note: this is where the heavy work is done. The inquirer prompt here is given an array
       which contains an object specifying for a dropdown list. That list appears as the array
-      'choices'. Once the user selects from the list, the response is held in 'type'. 
+      'choices'. Once the user selects from the list, the response is held in 'employeeType'. 
       The 'then' function of the 'answer' parameter can be provided with a 'switch cases' routine
-      to select the correct 'next' step based on the users input --- this is extracted from the 'type'
-      pointer by 'answer.type' */
+      to select the correct 'next' step based on the users input --- this is extracted from the 'employeeType'
+      pointer by 'answer.employeeType' */
       const addEmployee = () => {
         inquirer.prompt([
                                     
              {
-              name: 'type',
+              name: 'employeeType',
               message: "Would you like add another employee?",
               type: 'list',
               choices:[
@@ -48,7 +48,7 @@ inquirer.prompt(managerq)
              },
           ]) // Depending on the selection of one of the above choices, run one of the following functions:
             .then(function(answer){
-              switch(answer.type){
+              switch(answer.employeeType){
                 case "Engineer":{
                   createEngineer()
                 }break;
