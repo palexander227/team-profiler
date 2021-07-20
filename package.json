@@ -22,7 +22,7 @@
   },
   "jest": {
     "testMatch": [
-      "<rootDir>/**/**"
+      "<rootDir>/__tests__/**"
     ]
   }
 }

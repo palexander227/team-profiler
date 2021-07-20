@@ -7,21 +7,21 @@ const formatted = (emp) => {
       switch (e.role.toLowerCase()) {
         case "employee":
           {
-            icon = "<i class='bi bi-cup'></i>";
+            icon = "<i style='font-size:2rem' class='bi bi-person-badge'></i>";
           }
           break;
         case "engineer":
           {
-            icon = "<i class='bi bi-cup'></i>";
+            icon = "<i style='font-size:2rem' class='bi bi-code-slash'></i>";
           }
           break;
         case "intern":
           {
-            icon = "<i class='bi bi-cup'></i>";
+            icon = "<i style='font-size:2rem' class='bi bi-emoji-sunglasses'></i>";
           }
           break;
         default: {
-          icon = "<i class='bi bi-cup'></i>";
+          icon = "<i style='font-size:2rem' class='bi bi-vector-pen'></i>";
         }
       }
 
@@ -46,7 +46,7 @@ const formatted = (emp) => {
           break;
       }
       //Note: on line 29 the conditional rendering of 'extra' is required if 'extra' returns null
-      return `<div class="card m-3" style="width: 18rem;">
+      return `<div class="card m-3 shadow" style="width: 25rem;">
         <div class="bg-primary p-2 w-100 text-light d-flex justify-content-between text-capitalize"><h2>${
           e.role
         }</h2>${icon}</div>
@@ -54,7 +54,7 @@ const formatted = (emp) => {
         <h5 class="card-title">${e.name}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Id: ${e.id}</h6>
         <div class="p-2"> Email: <a href="${e.email}">${e.email}</a></div>
-        ${extra && extra} 
+        ${extra ? extra : ""} 
         </div>
     </div>`;
     })
