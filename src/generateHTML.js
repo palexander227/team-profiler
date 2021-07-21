@@ -75,7 +75,7 @@ const formatted = (emp) => {
   
   <body>
       <div class="bg-danger p-4 text-center w-100 text-light"><h1>My Team</h1></div>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex flex-wrap justify-content-center">
     
           ${empArr}   
               
