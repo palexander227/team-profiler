@@ -70,13 +70,20 @@ Once you have Node.js working from the command line, follow the instructions to 
 If you have successfully worked through the steps above, follow these steps to use the application. 
 
 1. In the directory tpg (above), open the command window. If you have not already done so, issue the command 'npm install'. 
-2. Start the application by issuing the command "node index.". You should see a prompt at the terminal similar to the one indicated in the screenshot ![](img/cmd1.png)
+2. Start the application by issuing the command "node index.". You should see a prompt at the terminal similar to the one indicated in the screenshot 
 
-3. All employees are here asked to provide name, ID, and email. The manager is asked for the office number, engineers for the Github name, and interns for their school. You can now enter the information at the terminal prompt for the MANAGER of the project. (This application assumes there is only one manager, but other variants are easily obtained.) When done, you will be prompted whether you would like to add additional employees, engineers, or interns to the project.    ![](img/cmd2.png) 
+    ![](img/cmd1.png)
+
+3. All employees are here asked to provide name, ID, and email. The manager is asked for the office number, engineers for the Github name, and interns for their school. You can now enter the information at the terminal prompt for the MANAGER of the project. (This application assumes there is only one manager, but other variants are easily obtained.) When done, you will be prompted whether you would like to add additional employees, engineers, or interns to the project.    
+
+    ![](img/cmd2.png) 
             
 
 
-4. You can continue adding as many engineers, employees and interns as you like. In our little example, let's say Tim's project has one engineer working with one intern and two administrative staff assistants. When finished entering their information, select 'No more employees'. You should see some thing like ![](img/cmd3.png)
+4. You can continue adding as many engineers, employees and interns as you like. In our little example, let's say Tim's project has one engineer working with one intern and two administrative staff assistants. When finished entering their information, select 'No more employees'. You should see some thing like 
+
+    ![](img/cmd3.png)
+
 5. You can view the finished product in the same directory. It is listed as 'test.html'. This can be viewed by using your favorite browser to open the file. 
 
 
